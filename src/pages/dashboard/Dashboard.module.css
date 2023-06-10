@@ -1,0 +1,22 @@
+.container {
+  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 28rem 1fr;
+  position: fixed;
+}
+
+.container > * {
+  min-width: 0px;
+  min-height: 0px;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  background: #f1f1f1;
+  box-shadow: 8px 2px 32px -2px rgba(37, 37, 37, 0.25);
+}
