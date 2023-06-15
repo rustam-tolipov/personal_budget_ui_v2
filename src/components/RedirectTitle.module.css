@@ -1,0 +1,46 @@
+.categories_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 1.6rem;
+  padding-bottom: 1.2rem;
+}
+
+.categories_title_icon {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.categories_icon {
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.categories_title {
+  display: flex;
+  align-items: end;
+}
+
+.categories_title_text {
+  display: flex;
+  align-items: center;
+
+  gap: 0.2rem;
+  margin-right: 0.2rem;
+
+  font-size: 1.6rem;
+
+  color: #353535;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.categories_btn_icon {
+  font-size: 2.2rem;
+  cursor: pointer;
+}
