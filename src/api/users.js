@@ -16,6 +16,14 @@ const usersApi = {
     }
   },
 
+  async deleteMember(id) {
+    try {
+      return await axios.delete(`/members/${id}`);
+    } catch (e) {
+      return e.response;
+    }
+  },
+
   async updateMember(id, data, headers) {
     try {
       return await axios.put(`/members/${id}`, data, headers);
