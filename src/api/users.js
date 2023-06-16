@@ -16,6 +16,14 @@ const usersApi = {
     }
   },
 
+  async updateMember(id, data, headers) {
+    try {
+      return await axios.put(`/members/${id}`, data, headers);
+    } catch (e) {
+      return e.response;
+    }
+  },
+
   async updateUser(id, data) {
     try {
       return await axios.put(`/auth/users/${id}`, data);
