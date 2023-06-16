@@ -15,6 +15,37 @@ const usersApi = {
       return e.response;
     }
   },
+  async getMembers() {
+    try {
+      return await axios.get('/members');
+    } catch (e) {
+      return e.response;
+    }
+  },
+
+  async getMostResentMembers() {
+    try {
+      return await axios.get(`/most_resent_members/`);
+    } catch (e) {
+      return e.response;
+    }
+  },
+
+  async getSettingsMembers() {
+    try {
+      return await axios.get(`/settings_members/`);
+    } catch (e) {
+      return e.response;
+    }
+  },
+
+  async getMember(id) {
+    try {
+      return await axios.get(`/members/${id}`);
+    } catch (e) {
+      return e.response;
+    }
+  },
 
   async deleteMember(id) {
     try {
