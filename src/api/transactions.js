@@ -24,6 +24,15 @@ const transactionsApi = {
       return e.response;
     }
   },
+  async searchTransactions(member_id, name) {
+    try {
+      return await axios.get(
+        `member/${member_id}/transactions/search?query=${name}`
+      );
+    } catch (e) {
+      return e.response;
+    }
+  },
 };
 
 export default transactionsApi;
