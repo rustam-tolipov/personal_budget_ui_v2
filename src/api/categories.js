@@ -53,6 +53,13 @@ const categoriesApi = {
       return e.response;
     }
   },
+  async deleteCategory(id) {
+    try {
+      return await axios.delete(`/categories/${id}`);
+    } catch (e) {
+      return e.response;
+    }
+  },
 };
 
 export default categoriesApi;
