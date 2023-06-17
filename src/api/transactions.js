@@ -33,6 +33,16 @@ const transactionsApi = {
       return e.response;
     }
   },
+  async addTransaction(member_id, category_id, data) {
+    try {
+      return await axios.post(
+        `/${member_id}/categories/${category_id}/transactions/`,
+        data
+      );
+    } catch (e) {
+      return e.response;
+    }
+  },
   async deleteTransaction(id) {
     try {
       return await axios.delete(`/transactions/${id}`);
