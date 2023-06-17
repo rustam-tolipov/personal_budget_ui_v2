@@ -43,6 +43,16 @@ const categoriesApi = {
       return e.response;
     }
   },
+  async updateCategory(member_id, category_id, data) {
+    try {
+      return await axios.put(
+        `/members/${member_id}/categories/${category_id}`,
+        data
+      );
+    } catch (e) {
+      return e.response;
+    }
+  },
 };
 
 export default categoriesApi;
