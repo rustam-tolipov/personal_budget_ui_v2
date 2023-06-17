@@ -36,6 +36,13 @@ const categoriesApi = {
       return e.response;
     }
   },
+  async addCategory(data) {
+    try {
+      return await axios.post('/categories', data);
+    } catch (e) {
+      return e.response;
+    }
+  },
 };
 
 export default categoriesApi;
