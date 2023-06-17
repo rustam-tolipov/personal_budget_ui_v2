@@ -33,6 +33,16 @@ const transactionsApi = {
       return e.response;
     }
   },
+  async updateTransaction(member_id, category_id, id, data) {
+    try {
+      return await axios.put(
+        `/member/${member_id}/categories/${category_id}/transactions/${id}`,
+        data
+      );
+    } catch (e) {
+      return e.response;
+    }
+  },
 };
 
 export default transactionsApi;
