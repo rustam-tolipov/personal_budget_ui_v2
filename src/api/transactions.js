@@ -33,6 +33,13 @@ const transactionsApi = {
       return e.response;
     }
   },
+  async deleteTransaction(id) {
+    try {
+      return await axios.delete(`/transactions/${id}`);
+    } catch (e) {
+      return e.response;
+    }
+  },
   async updateTransaction(member_id, category_id, id, data) {
     try {
       return await axios.put(
