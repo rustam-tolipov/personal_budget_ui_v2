@@ -60,6 +60,15 @@ const categoriesApi = {
       return e.response;
     }
   },
+  async deleteMemberCategory(member_id, category_id) {
+    try {
+      return await axios.post(
+        `/member/${member_id}/category/${category_id}/remove`
+      );
+    } catch (e) {
+      return e.response;
+    }
+  },
 };
 
 export default categoriesApi;
