@@ -15,6 +15,13 @@ const usersApi = {
       return e.response;
     }
   },
+  async addMember(data) {
+    try {
+      return await axios.post('/members', data);
+    } catch (e) {
+      return e.response;
+    }
+  },
   async getMembers() {
     try {
       return await axios.get('/members');
