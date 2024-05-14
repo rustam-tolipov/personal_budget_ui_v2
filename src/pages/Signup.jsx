@@ -13,7 +13,7 @@ const Signup = () => {
         </div>
         <RegistrationForm />
       </div>
-      <div className="h-full w-full">
+      <div className="hidden h-full w-full lg:block">
         <LazyLoadImage
           alt="Login image"
           src="./images/login/login.jpeg"

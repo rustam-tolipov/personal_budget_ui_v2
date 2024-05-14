@@ -4,7 +4,6 @@ import RegistrationForm from "../features/registration/RegistrationForm";
 import LoginFrom from "../features/registration/LoginForm";
 
 const Login = () => {
-  
   return (
     <div className="flex h-[100dvh] w-full bg-slate-50">
       <div className="flex h-full w-full flex-col px-6 py-4">
@@ -14,7 +13,7 @@ const Login = () => {
         </div>
         <LoginFrom />
       </div>
-      <div className="h-full w-full">
+      <div className="hidden h-full w-full lg:block">
         <LazyLoadImage
           alt="Login image"
           src="./images/login/login.jpeg"

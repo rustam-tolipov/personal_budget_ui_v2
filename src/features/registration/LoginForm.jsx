@@ -19,7 +19,7 @@ const LoginFrom = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className="flex h-full items-center justify-center">
+    <div className="flex h-full items-center justify-center ml-2 sm:ml-0">
       <Card color="transparent" shadow={false}>
         <Typography variant="h4" color="blue-gray">
           Login
