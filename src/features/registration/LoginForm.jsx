@@ -5,7 +5,9 @@ import {
   Checkbox,
   Button,
   Typography,
+  Spinner,
 } from "@material-tailwind/react";
+
 import { EyeSlashIcon, EyeIcon } from "@heroicons/react/24/solid";
 
 import { NavLink } from "react-router-dom";
@@ -13,6 +15,8 @@ import { NavLink } from "react-router-dom";
 const LoginFrom = () => {
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => setPasswordShown((cur) => !cur);
+
+  const [isLoading, setIsLoading] = useState(true);
 
   return (
     <div className="flex h-full items-center justify-center">
@@ -58,9 +62,20 @@ const LoginFrom = () => {
               }
             />
           </div>
-          <Button className="mt-6" fullWidth>
-            login
-          </Button>
+
+          {isLoading ? (
+            <Button
+              // disabled
+              className="mt-6 flex items-center justify-center"
+              fullWidth
+            >
+              <Spinner />
+            </Button>
+          ) : (
+            <Button className="mt-6" fullWidth>
+              login
+            </Button>
+          )}
           <Typography color="gray" className="mt-4 text-center font-normal">
             Do not have an account?{" "}
             <NavLink className="font-medium text-gray-900" to="/sign-up">
